@@ -29,7 +29,7 @@ The histogram of the total number of steps taken each day is presented below.
 hist(stepsbyday$x,xlab='Steps',main = 'Mean steps by day',ylim=range(0:30))
 ```
 
-![](PA1_template_files/figure-html/Mean steps by day-1.png)<!-- -->
+![](PA1_template_files/figure-html/Mean_steps_by_day-1.png)<!-- -->
 
 ### 3.Calculate and report the mean and median of the total number of steps taken per day
 The mean and median of the total number of steps taken per day were calculated by the corresponding functions and the results are shown below.

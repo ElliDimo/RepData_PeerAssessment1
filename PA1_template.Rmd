@@ -22,7 +22,7 @@ stepsbyday <-na.omit(stepsbyday)
 ```
 ### 2.Make a histogram of the total number of steps taken each day
 The histogram of the total number of steps taken each day is presented below.
-```{r Mean steps by day}
+```{r Mean_steps_by_day}
 hist(stepsbyday$x,xlab='Steps',main = 'Mean steps by day',ylim=range(0:30))
 ```
 
