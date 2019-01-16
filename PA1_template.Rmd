@@ -37,7 +37,7 @@ median(stepsbyday$x)
 
 ### 1. Make a time series plot of the 5-minute interval and the average number of steps taken, averaged across all days
 To calculate the average daily activity pattern, again aggregate function was used.
-```{r Average daily activity pattern}
+```{r Average_daily_activity_pattern}
 meaninterval <- aggregate(act$steps, list(act$interval), FUN=mean, na.rm=T)
 plot(meaninterval$Group.1,meaninterval$x,type ='l',xlab='Interval',ylab='Steps',main = 'Average number of steps per interval across all days')
 ```
@@ -76,7 +76,7 @@ stepsbydaynew<-aggregate(actNEW$steps, list(actNEW$date), FUN=sum)
 ```
 
 The new histogram of the total number of steps taken each day with missing values imputed is shown below. 
-```{r Mean steps by day with imputed missing values}
+```{r Mean_steps_by_day_with_imputed_missing_values}
 hist(stepsbydaynew$x,xlab='Steps',main = 'Mean steps by day with imputed missing values',ylim=range(0:40))
 ```
 
@@ -102,7 +102,7 @@ actNEW$weekday<-as.factor(as.character(actNEW$weekday))
 
 ### 2.Make a panel plot containing a time series plot of the 5-minute interval and the average number of steps taken, averaged across all weekday days or weekend days.
 The mean total number of steps taken for weekdays and weekend days separately was calculated via the use of aggregate function. To plot the panel of weekend/weekdays average daily activity pattern the lattice system was used.
-```{r Average daily activity pattern for weekdays and weekends}
+```{r Average_daily_activity_pattern_for_weekdays_and_weekends}
 lista<-list()
 lista[[1]]<-actNEW$interval
 lista[[2]]<-actNEW$weekday

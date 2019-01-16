@@ -60,7 +60,7 @@ meaninterval <- aggregate(act$steps, list(act$interval), FUN=mean, na.rm=T)
 plot(meaninterval$Group.1,meaninterval$x,type ='l',xlab='Interval',ylab='Steps',main = 'Average number of steps per interval across all days')
 ```
 
-![](PA1_template_files/figure-html/Average daily activity pattern-1.png)<!-- -->
+![](PA1_template_files/figure-html/Average_daily_activity_pattern-1.png)<!-- -->
 
 ### 2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -109,7 +109,7 @@ The new histogram of the total number of steps taken each day with missing value
 hist(stepsbydaynew$x,xlab='Steps',main = 'Mean steps by day with imputed missing values',ylim=range(0:40))
 ```
 
-![](PA1_template_files/figure-html/Mean steps by day with imputed missing values-1.png)<!-- -->
+![](PA1_template_files/figure-html/Mean_steps_by_day_with_imputed_missing_values-1.png)<!-- -->
 
 The new mean and median of the total number of steps taken per day were calculated as :
 
@@ -156,6 +156,6 @@ library(lattice)
 xyplot(x ~ Group.1 | Group.2, data = meanweekdays,type='l', layout = c(1, 2),xlab='Interval',ylab='Number of steps',main='Average daily activity pattern for weekdays and weekends')
 ```
 
-![](PA1_template_files/figure-html/Average daily activity pattern for weekdays and weekends-1.png)<!-- -->
+![](PA1_template_files/figure-html/Average_daily_activity_pattern_for_weekdays_and_weekends-1.png)<!-- -->
 
 We notice several differences in the average daily activity pattern between weekdays and weekends.
